@@ -3,233 +3,1149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RareIsland | Single-Origin Extra Virgin Coconut Oil</title>
+
+<title>Rare Island | India's Island-Born Single-Origin Coconut Oil</title>
+
+<meta name="description"
+content="Rare Island — India's Island-Born Single-Origin Extra Virgin Coconut Oil. From our island-grown coconuts to your home.">
 
 <style>
+
+/* =========================
+   GLOBAL
+========================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#fafaf7;
-    color:#333;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#fbfaf5;
+    color:#24352b;
+    line-height:1.6;
 }
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
 
 header{
-    background:#0c4b2e;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(7,48,31,0.97);
+    backdrop-filter:blur(10px);
     color:white;
-    padding:15px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
-header h2{
-    font-size:28px;
+.navbar{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+.logo-text{
+    font-size:25px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.logo-text span{
+    color:#d7b65a;
+}
+
+nav{
+    display:flex;
+    gap:28px;
 }
 
 nav a{
     color:white;
-    text-decoration:none;
-    margin-left:20px;
+    font-size:15px;
+    transition:0.3s;
 }
+
+nav a:hover{
+    color:#d7b65a;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
+    min-height:calc(100vh - 72px);
+    display:flex;
+    align-items:center;
+    background:
+        linear-gradient(
+            rgba(4,39,25,0.72),
+            rgba(4,39,25,0.72)
+        ),
+        url("farm.jpg") center/cover no-repeat;
+    color:white;
     text-align:center;
-    padding:60px 20px;
-    background:#f4f7f2;
 }
 
-.hero img{
-    width:220px;
-    border-radius:12px;
-    margin-bottom:20px;
+.hero-content{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding:90px 0;
+}
+
+.hero-small{
+    color:#e1c76d;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:18px;
 }
 
 .hero h1{
-    font-size:42px;
-    color:#0c4b2e;
-    margin-bottom:15px;
+    font-family:Georgia, serif;
+    font-size:clamp(42px,7vw,78px);
+    line-height:1.05;
+    margin-bottom:25px;
 }
 
-.hero p{
+.hero h1 span{
+    color:#e0c66a;
+}
+
+.hero-subtitle{
+    font-size:clamp(18px,2.5vw,24px);
+    max-width:750px;
+    margin:0 auto 15px;
+}
+
+.hero-description{
     max-width:700px;
-    margin:auto;
-    font-size:18px;
+    margin:0 auto;
+    color:#e9eee9;
+    font-size:16px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 .btn{
     display:inline-block;
-    margin-top:25px;
-    padding:12px 30px;
+    padding:14px 27px;
+    border-radius:50px;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#d7b65a;
+    color:#173725;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    background:#e5ca78;
+}
+
+.btn-whatsapp{
     background:#25d366;
     color:white;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:bold;
 }
 
-.section{
-    padding:70px 10%;
+.btn-whatsapp:hover{
+    transform:translateY(-3px);
+    background:#20bd5b;
 }
 
-.section h2{
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+    padding:80px 20px;
     text-align:center;
-    color:#0c4b2e;
-    margin-bottom:30px;
 }
+
+.eyebrow{
+    color:#9b7a25;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-family:Georgia,serif;
+    font-size:clamp(32px,5vw,48px);
+    color:#0b4a2c;
+    margin-bottom:18px;
+}
+
+.section-text{
+    max-width:750px;
+    margin:auto;
+    color:#59655d;
+    font-size:17px;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story{
+    padding:80px 0;
+    background:#f0f3eb;
+}
+
+.story-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.story-image{
+    min-height:480px;
+    border-radius:20px;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.15)
+        ),
+        url("farm.jpg") center/cover no-repeat;
+    box-shadow:0 20px 50px rgba(0,0,0,0.12);
+}
+
+.story-content h2{
+    font-family:Georgia,serif;
+    color:#0b4a2c;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.story-content p{
+    color:#59655d;
+    margin-bottom:18px;
+    font-size:16px;
+}
+
+.story-highlight{
+    margin-top:25px;
+    padding:20px;
+    border-left:4px solid #d7b65a;
+    background:white;
+    border-radius:0 12px 12px 0;
+}
+
+.story-highlight strong{
+    color:#0b4a2c;
+}
+
+
+/* =========================
+   VALUES
+========================= */
+
+.values{
+    padding:80px 0;
+}
+
+.value-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    margin-top:45px;
+}
+
+.value-card{
+    background:white;
+    padding:32px 25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 30px rgba(0,0,0,0.07);
+    transition:0.3s;
+}
+
+.value-card:hover{
+    transform:translateY(-7px);
+}
+
+.value-icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.value-card h3{
+    color:#0b4a2c;
+    margin-bottom:10px;
+}
+
+.value-card p{
+    color:#68736b;
+    font-size:14px;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
 
 .products{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
+    padding:90px 0;
+    background:#f6f3e9;
 }
 
-.card{
-    width:300px;
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    max-width:850px;
+    margin:45px auto 0;
+}
+
+.product-card{
     background:white;
-    border-radius:12px;
-    padding:25px;
-    box-shadow:0 3px 12px rgba(0,0,0,.12);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 12px 40px rgba(0,0,0,0.08);
+}
+
+.product-image{
+    height:280px;
+    background:#eee center/cover no-repeat;
+}
+
+.product-one{
+    background-image:url("product-200ml.jpg");
+}
+
+.product-two{
+    background-image:url("product-500ml.jpg");
+}
+
+.product-info{
+    padding:28px;
     text-align:center;
 }
 
-.card h3{
-    color:#0c4b2e;
+.product-info h3{
+    color:#0b4a2c;
+    font-family:Georgia,serif;
+    font-size:25px;
+}
+
+.product-info p{
+    color:#68736b;
+    margin:10px 0 15px;
 }
 
 .price{
-    color:#d4a017;
-    font-size:32px;
-    font-weight:bold;
-    margin-top:15px;
+    color:#9b7a25;
+    font-size:30px;
+    font-weight:800;
+    margin-bottom:18px;
 }
 
-.features{
-    max-width:700px;
-    margin:auto;
-    line-height:2;
+.order-btn{
+    display:inline-block;
+    background:#25d366;
+    color:white;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:bold;
 }
+
+
+/* =========================
+   PROMISE
+========================= */
+
+.promise{
+    padding:90px 20px;
+    background:#0b4a2c;
+    color:white;
+    text-align:center;
+}
+
+.promise h2{
+    font-family:Georgia,serif;
+    font-size:clamp(34px,5vw,50px);
+    margin-bottom:20px;
+}
+
+.promise p{
+    max-width:750px;
+    margin:auto;
+    color:#dfe9e2;
+    font-size:17px;
+}
+
+.promise-list{
+    margin:40px auto 0;
+    max-width:700px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.promise-item{
+    background:rgba(255,255,255,0.08);
+    padding:16px;
+    border-radius:10px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
-    background:#0c4b2e;
-    color:white;
+    padding:80px 20px;
     text-align:center;
-    padding:50px;
 }
 
-footer{
-    background:#07321e;
-    color:white;
-    text-align:center;
-    padding:15px;
+.contact-box{
+    max-width:700px;
+    margin:35px auto 0;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 35px rgba(0,0,0,0.08);
 }
+
+.contact-box p{
+    margin:10px 0;
+    color:#5e6962;
+}
+
+.contact-whatsapp{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    background:#25d366;
+    color:white;
+    border-radius:40px;
+    font-weight:bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#06321f;
+    color:#dce6df;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.footer-brand{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.footer-brand span{
+    color:#d7b65a;
+}
+
+footer p{
+    font-size:13px;
+    color:#aebdb3;
+}
+
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25d366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:29px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+    z-index:2000;
+    transition:0.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .navbar{
+        justify-content:center;
+    }
+
+    .story-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .story-image{
+        min-height:350px;
+    }
+
+    .value-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .promise-list{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:85vh;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+}
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-    <h2>🥥 RareIsland</h2>
 
-    <nav>
-        #aboutAbout</a>
-        <aroductsProducts</a>
-        <aontactContact</a>
-    </nav>
-</header>
+<div class="container navbar">
 
-<section class="hero">
+    <a href="#" class="logo">
 
-    logo.jpg
+        <img src="logo.jpg" alt="Rare Island Logo">
 
-    <h1>Single-Origin Extra Virgin Coconut Oil</h1>
+        <div class="logo-text">
+            RARE <span>ISLAND</span>
+        </div>
 
-    <p>
-        Pure cold-pressed coconut oil sourced directly from selected
-        coconut farms in South India. No chemicals, no preservatives,
-        just natural goodness.
-    </p>
-
-    <a class="btn"
-       href="https://wa.me/ WhatsApp
     </a>
 
-</section>
-
-<section id="about" class="section">
-
-    <h2>Why RareIsland?</h2>
-
-    <div class="features">
-        ✅ Single-Origin Coconut Farms<br>
-        ✅ 100% Extra Virgin Coconut Oil<br>
-        ✅ Traditional Cold Pressed Extraction<br>
-        ✅ No Chemicals or Preservatives<br>
-        ✅ Rich Natural Aroma & Nutrients<br>
-        ✅ Farm to Bottle Quality
-    </div>
-
-</section>
-
-<section id="products" class="section">
-
-    <h2>Our Products</h2>
-
-    <div class="products">
-
-        <div class="card">
-            <h3>🥥 200ml Premium Bottle</h3>
-            <p>
-                Perfect for first-time customers and gifting.
-            </p>
-            <div class="price">₹300</div>
-        </div>
-
-        <div class="card">
-            <h3>🥥 500ml Premium Bottle</h3>
-            <p>
-                Best value for everyday cooking and wellness.
-            </p>
-            <div class="price">₹750</div>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="section">
-
-    <h2>Our Story</h2>
-
-    <p style="text-align:center;max-width:800px;margin:auto;">
-        RareIsland was created with a vision to deliver authentic,
-        single-origin extra virgin coconut oil from carefully selected
-        Indian coconut farms. Every bottle is crafted to preserve
-        purity, freshness, and natural nutrition.
-    </p>
-
-</section>
-
-<div id="contact" class="contact">
-
-    <h2>Contact Us</h2>
-
-    <p>Call: +91 91607 52807</p>
-
-    <p>Website: rareisland.in</p>
-
-    <p>Hyderabad, India</p>
+    <nav>
+        <a href="#story">Our Story</a>
+        <a href="#values">Why Rare Island</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
 </div>
 
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+    <div class="hero-small">
+        India's Island-Born Brand
+    </div>
+
+    <h1>
+        From Our <span>Island</span><br>
+        To Your Home
+    </h1>
+
+    <p class="hero-subtitle">
+        Single-Origin Extra Virgin Coconut Oil
+    </p>
+
+    <p class="hero-description">
+        Naturally crafted from island-grown coconuts,
+        with a focus on purity, traceability and the
+        character of a single origin.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="#products" class="btn btn-primary">
+            Explore Our Oil
+        </a>
+
+        <a
+        href="https://wa.me/919160752807?text=Hello%20Rare%20Island%2C%20I%20would%20like%20to%20know%20more%20about%20your%20coconut%20oil."
+        class="btn btn-whatsapp"
+        target="_blank">
+            💬 WhatsApp Us
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro">
+
+<div class="container">
+
+    <div class="eyebrow">
+        Rare Island
+    </div>
+
+    <h2 class="section-title">
+        Not Just Coconut Oil.
+        A Place of Origin.
+    </h2>
+
+    <p class="section-text">
+
+        Rare Island was born from a simple idea:
+        when you know where something comes from,
+        you understand what makes it special.
+
+        Our journey begins with coconuts grown on
+        our island farm in South India and ends with
+        a carefully crafted bottle delivered to your home.
+
+    </p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     STORY
+========================= -->
+
+<section class="story" id="story">
+
+<div class="container story-grid">
+
+    <div class="story-image"></div>
+
+    <div class="story-content">
+
+        <div class="eyebrow">
+            Our Origin
+        </div>
+
+        <h2>
+            Born From Our Island
+        </h2>
+
+        <p>
+            Rare Island is inspired by our family's
+            connection to coconut farming and the land
+            that has supported generations before us.
+        </p>
+
+        <p>
+            Instead of sourcing coconuts from multiple
+            unknown locations, our vision is simple:
+            preserve the identity of the origin.
+        </p>
+
+        <p>
+            The result is a single-origin coconut oil
+            created with careful attention from farm
+            to bottle.
+        </p>
+
+        <div class="story-highlight">
+
+            <strong>
+                Third-generation farm.
+            </strong>
+
+            <br>
+
+            One origin. One story.
+            One bottle.
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     VALUES
+========================= -->
+
+<section class="values" id="values">
+
+<div class="container">
+
+    <div style="text-align:center">
+
+        <div class="eyebrow">
+            Our Promise
+        </div>
+
+        <h2 class="section-title">
+            Why Rare Island?
+        </h2>
+
+        <p class="section-text">
+            We focus on origin, simplicity and
+            preserving the natural character of coconut oil.
+        </p>
+
+    </div>
+
+
+    <div class="value-grid">
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🌴
+            </div>
+
+            <h3>
+                Single Origin
+            </h3>
+
+            <p>
+                Our identity begins with coconuts
+                connected to a defined place of origin.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🥥
+            </div>
+
+            <h3>
+                Extra Virgin
+            </h3>
+
+            <p>
+                Carefully crafted coconut oil designed
+                to retain its natural aroma and character.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🔍
+            </div>
+
+            <h3>
+                Traceable
+            </h3>
+
+            <p>
+                Our long-term vision is to make every
+                bottle's origin transparent and traceable.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🌱
+            </div>
+
+            <h3>
+                Farm Focused
+            </h3>
+
+            <p>
+                We believe better products begin with
+                responsible attention to the source.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🧴
+            </div>
+
+            <h3>
+                Farm to Bottle
+            </h3>
+
+            <p>
+                Our story connects the farm, the oil
+                and the final bottle.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🇮🇳
+            </div>
+
+            <h3>
+                Made in India
+            </h3>
+
+            <p>
+                A premium coconut oil brand built
+                around an Indian origin story.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section class="products" id="products">
+
+<div class="container">
+
+    <div style="text-align:center">
+
+        <div class="eyebrow">
+            Our Collection
+        </div>
+
+        <h2 class="section-title">
+            Rare Island Coconut Oil
+        </h2>
+
+        <p class="section-text">
+            Choose your bottle and contact us directly
+            through WhatsApp for availability and ordering.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- 200 ML -->
+
+        <div class="product-card">
+
+            <div class="product-image product-one"></div>
+
+            <div class="product-info">
+
+                <h3>
+                    200ml Premium Bottle
+                </h3>
+
+                <p>
+                    A convenient size for first-time
+                    customers and gifting.
+                </p>
+
+                <div class="price">
+                    ₹300
+                </div>
+
+                <a
+                href="https://wa.me/919160752807?text=Hello%20Rare%20Island%2C%20I%20would%20like%20to%20order%20the%20200ml%20coconut%20oil."
+                class="order-btn"
+                target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 500 ML -->
+
+        <div class="product-card">
+
+            <div class="product-image product-two"></div>
+
+            <div class="product-info">
+
+                <h3>
+                    500ml Premium Bottle
+                </h3>
+
+                <p>
+                    A larger bottle for regular
+                    household use.
+                </p>
+
+                <div class="price">
+                    ₹750
+                </div>
+
+                <a
+                href="https://wa.me/919160752807?text=Hello%20Rare%20Island%2C%20I%20would%20like%20to%20order%20the%20500ml%20coconut%20oil."
+                class="order-btn"
+                target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PROMISE
+========================= -->
+
+<section class="promise">
+
+<div class="container">
+
+    <div class="eyebrow" style="color:#d7b65a;">
+        The Rare Island Philosophy
+    </div>
+
+    <h2>
+        Simple. Natural. Traceable.
+    </h2>
+
+    <p>
+
+        We are building Rare Island around a simple
+        principle — know the source, respect the ingredient,
+        and let the product speak for itself.
+
+    </p>
+
+
+    <div class="promise-list">
+
+        <div class="promise-item">
+            🌴 Island-grown coconuts
+        </div>
+
+        <div class="promise-item">
+            🥥 Single-origin identity
+        </div>
+
+        <div class="promise-item">
+            🔍 Focus on traceability
+        </div>
+
+        <div class="promise-item">
+            🧴 Carefully packed
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+    <div class="eyebrow">
+        Get In Touch
+    </div>
+
+    <h2 class="section-title">
+        Talk to Rare Island
+    </h2>
+
+    <p class="section-text">
+        Have a question about our coconut oil?
+        Message us directly on WhatsApp.
+    </p>
+
+
+    <div class="contact-box">
+
+        <p>
+            📱 +91 91607 52807
+        </p>
+
+        <p>
+            🌐 rareisland.in
+        </p>
+
+        <p>
+            📍 Hyderabad, India
+        </p>
+
+        <a
+        href="https://wa.me/919160752807?text=Hello%20Rare%20Island%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products."
+        class="contact-whatsapp"
+        target="_blank">
+
+            💬 Chat With Us on WhatsApp
+
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-    © 2026 RareIsland. All Rights Reserved.
+
+    <div class="footer-brand">
+        RARE <span>ISLAND</span>
+    </div>
+
+    <p>
+        India's Island-Born Single-Origin Coconut Oil
+    </p>
+
+    <p style="margin-top:10px;">
+        © 2026 Rare Island. All Rights Reserved.
+    </p>
+
 </footer>
+
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+href="https://wa.me/919160752807?text=Hello%20Rare%20Island%2C%20I%20would%20like%20to%20know%20more%20about%20your%20coconut%20oil."
+class="whatsapp-float"
+target="_blank"
+aria-label="Chat with Rare Island on WhatsApp">
+
+    💬
+
+</a>
+
 
 </body>
 </html>
